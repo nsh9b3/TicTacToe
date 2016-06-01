@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.stuff.tictactoe.LaunchedActivity">
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_CC"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent"
+        android:onClick="onClickSetMark"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_TC"
+        android:layout_above="@+id/button_CC"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:background="@android:color/transparent"
+        android:onClick="onClickSetMark"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_BC"
+        android:layout_below="@+id/button_CC"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/transparent"
+        android:onClick="onClickSetMark"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_TL"
+        android:layout_alignBottom="@+id/button_TC"
+        android:layout_toLeftOf="@+id/button_TC"
+        android:layout_marginRight="20dp"
+        android:background="@android:color/transparent"
+        android:onClick="onClickSetMark"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_CL"
+        android:layout_alignBottom="@+id/button_CC"
+        android:layout_toLeftOf="@+id/button_CC"
+        android:layout_marginRight="20dp"
+        android:background="@android:color/transparent"
+        android:onClick="onClickSetMark"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_BL"
+        android:layout_alignBottom="@+id/button_BC"
+        android:layout_toLeftOf="@+id/button_BC"
+        android:layout_marginRight="20dp"
+        android:background="@android:color/transparent"
+        android:onClick="onClickSetMark"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_TR"
+        android:layout_alignBottom="@+id/button_TC"
+        android:layout_toRightOf="@+id/button_TC"
+        android:layout_marginLeft="20dp"
+        android:background="@android:color/transparent"
+        android:onClick="onClickSetMark"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_CR"
+        android:layout_alignBottom="@+id/button_CC"
+        android:layout_toRightOf="@+id/button_CC"
+        android:layout_marginLeft="20dp"
+        android:background="@android:color/transparent"
+        android:onClick="onClickSetMark"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_BR"
+        android:layout_alignBottom="@+id/button_BC"
+        android:layout_toRightOf="@+id/button_BC"
+        android:layout_marginLeft="20dp"
+        android:background="@android:color/transparent"
+        android:onClick="onClickSetMark"/>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="fill_parent"
+        android:background="#000000"
+        android:layout_toLeftOf="@+id/button_CC"
+        android:layout_alignTop="@+id/button_TC"
+        android:layout_alignBottom="@+id/button_BC"
+        android:layout_marginRight="10dp"/>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="fill_parent"
+        android:background="#000000"
+        android:layout_toRightOf="@+id/button_CC"
+        android:layout_alignTop="@+id/button_TC"
+        android:layout_alignBottom="@+id/button_BC"
+        android:layout_marginLeft="10dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000000"
+        android:layout_above="@+id/button_CC"
+        android:layout_marginBottom="10dp"
+        android:layout_alignRight="@+id/button_CR"
+        android:layout_alignLeft="@+id/button_CL"/>
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000000"
+        android:layout_below="@+id/button_CC"
+        android:layout_marginTop="10dp"
+        android:layout_alignRight="@+id/button_CR"
+        android:layout_alignLeft="@+id/button_CL"/>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_player_name"
+        android:text="Player 1"
+        android:background="#f00"
+        android:textColor="#fff"
+        android:clickable="false"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Still Playing"
+        android:id="@+id/button_winner_info"
+        android:background="#0ff"
+        android:clickable="false"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Restart Game"
+        android:id="@+id/button_restart"
+        android:background="#f0f"
+        android:visibility="gone"
+        android:onClick="resetGame"
+        android:layout_above="@+id/button_winner_info"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>
